@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  backend:
+    image: node:18
+    working_dir: /usr/src/app/backend
+    volumes:
+      - ./backend:/usr/src/app/backend
+      - /usr/src/app/backend/node_modules
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      MONGODB_URI: mongodb://mongo:27017/urlshortener
+      # JWT_SECRET should be provided via an untracked .env file or your environment
+      FRONTEND_URL: http://localhost:5173
+      NODE_ENV: development
+    depends_on:
+      - mongo
+    command: sh -c "npm install --prefix /usr/src/app/backend && npm run dev --prefix /usr/src/app/backend"
+
+  frontend:
+    image: node:18
+    working_dir: /usr/src/app/frontend
+    volumes:
+      - ./frontend:/usr/src/app/frontend
+      - /usr/src/app/frontend/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:5000/api
+    depends_on:
+      - backend
+    command: sh -c "npm install --prefix /usr/src/app/frontend && npm run dev --prefix /usr/src/app/frontend -- --host 0.0.0.0"
+
+volumes:
+  mongo-data:
