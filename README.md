@@ -288,7 +288,8 @@ BASE_URL=http://localhost:5000
 # 📸 Screenshots
 
 ### Login Page
-(Add Screenshot)
+
+
 
 ### Dashboard
 (Add Screenshot)
@@ -297,7 +298,7 @@ BASE_URL=http://localhost:5000
 (Add Screenshot)
 
 ### Analytics
-(Add Screenshot)
+<img width="1344" height="565" alt="image" src="https://github.com/user-attachments/assets/0939c30e-7c9f-41be-9b9a-31be45aed431" />
 
 ### QR Code Generation
 (Add Screenshot)
