@@ -288,20 +288,24 @@ BASE_URL=http://localhost:5000
 # 📸 Screenshots
 
 ### Login Page
+<img width="1335" height="562" alt="image" src="https://github.com/user-attachments/assets/0c2f2c13-e2c6-4bcd-acd5-f80899b3eb38" />
 
 
 
 ### Dashboard
-(Add Screenshot)
+<img width="1357" height="573" alt="image" src="https://github.com/user-attachments/assets/79d63699-a07a-4bff-95b3-add074217782" />
+
 
 ### URL Creation
-(Add Screenshot)
+<img width="1341" height="567" alt="image" src="https://github.com/user-attachments/assets/8a44d74f-4bdb-4db7-b8a6-8462101d0520" />
+
 
 ### Analytics
 <img width="1344" height="565" alt="image" src="https://github.com/user-attachments/assets/0939c30e-7c9f-41be-9b9a-31be45aed431" />
 
 ### QR Code Generation
-(Add Screenshot)
+<img width="1345" height="569" alt="image" src="https://github.com/user-attachments/assets/4c294cbd-f1ad-4daf-a518-e32582160eda" />
+
 
 ---
 
